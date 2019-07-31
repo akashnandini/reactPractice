@@ -2,7 +2,7 @@ import React from "react";
 
 function Result(props) {
   return (
-        <div className="text-center">        
+        <div className="text-center resultBox">        
         <h3>Longitude: {props.lon}</h3>
         <h3>Latitude: {props.lat}</h3>
         <h3>weather: {props.weather}</h3>

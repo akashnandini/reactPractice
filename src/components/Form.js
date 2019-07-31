@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Result from "./Result";
+//import Header from "./Header";
+import "./style.css"
 import axios from "axios";
 
 class Form extends Component{
@@ -43,7 +45,7 @@ class Form extends Component{
     };
     handleFormSubmit = event =>{
         event.preventDefault();
-        alert(`hello ${this.state.state} ${this.state.country}`)
+        //alert(`hello ${this.state.state} ${this.state.country}`)
         this.searchWeather();
         this.setState({
             state : "",
@@ -53,23 +55,27 @@ class Form extends Component{
     }
     render(){
         return(
-            <div>
-                <p>
-                    Weather result : {this.state.state} {this.state.country}
-                    </p>
-                <form className="form">
+            <div className="result">
+                <p><b><center><h2>Weather Report</h2></center></b></p>                
+                <form className="form formBox">
                     <input type = "text" 
                     name = "state" 
                     value = {this.state.state} 
-                    onChange = {this.handleChangeInput}
+                    onChange = {this.handleChangeInput} 
+                    placeholder = "Enter State"
+                    size = "35"
                     />
+                    <br />
                     <input type = "text" 
                     name = "country" 
                     value = {this.state.country} 
-                    onChange = {this.handleChangeInput}
+                    onChange = {this.handleChangeInput} 
+                    placeholder = "Enter Country"
+                    size = "35"
                     />
+                    <br />
                     <button onClick = {this.handleFormSubmit}>Submit</button>
-                </form>
+                </form>   
                 <Result 
                     lon = {this.state.lon}
                     lat = {this.state.lat}
@@ -77,7 +83,7 @@ class Form extends Component{
                     weather = {this.state.weather}
                     location = {this.state.location}
                     loc_country = {this.state.loc_country}
-                />      
+                /> 
             </div>
         )
     }

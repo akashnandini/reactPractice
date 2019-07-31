@@ -1,0 +1,27 @@
+.header {
+    
+    height: 230px;
+    background-position: center; 
+    background-repeat: no-repeat;
+    
+  }
+  .result{
+      background-color: lightblue;
+      height: 600px;
+      width: 600px;
+      border:2px solid black;
+      align-content: center;
+      background-image: url("../images/weather.png");      
+      background-repeat: no-repeat;     
+      background-size: cover;
+      margin-left:380px;
+  }
+
+  .resultBox{
+      margin-left: 50px;
+  }
+
+  .formBox{
+    margin-left: 50px;
+    margin-top: 40px;
+  }
